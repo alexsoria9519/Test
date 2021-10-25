@@ -1,0 +1,29 @@
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th scope="col">#</th>
+    <th scope="col"> Type </th>
+    <th scope="col">Url</th>
+    <th scope="col">Avatar URL</th>
+    <th scope="col"> Actions </th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let user of dataUsers; index as i">
+    <th scope="row">{{ i + 1 }}</th>
+    <td>
+      {{ user.type }}
+    </td>
+    <td>{{ user.url}}</td>
+    <td>
+      <img [src]="user.avatar_url" class="mr-2" style="width: 20px">
+    </td>
+    <td> <div class="btn-group btn-group-toggle">
+      <button type="button" (click)="showUser(user)" class="btn btn-primary">Show</button>
+      <button type="button" (click)="updateUser(user)" class="btn btn-secondary">Update</button>
+      <button type="button" (click)="deleteUser(user)" class="btn btn-danger">Delete</button>
+    </div> </td>
+    <hr>
+  </tr>
+  </tbody>
+</table>

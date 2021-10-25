@@ -4,13 +4,26 @@ import { PagesComponent } from './pages.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { SharedModule } from '../shared/shared.module';
 import { RouterModule } from '@angular/router';
+import { ApiDatabaseComponent } from './api-database/api-database.component';
+import { HttpClientModule } from '@angular/common/http';
+import { UsersComponent } from '../components/users/users.component';
+import { UserComponent } from '../components/users/user/user.component';
+import { RepositoryComponent } from '../components/repositories/repository/repository.component';
+import { RepositoriesComponent } from '../components/repositories/repositories.component';
+import { FormsModule } from '@angular/forms';
 
 
 
 @NgModule({
   declarations: [
     PagesComponent,
-    DashboardComponent
+    DashboardComponent,
+    ApiDatabaseComponent,
+
+    UsersComponent,
+    UserComponent,
+    RepositoryComponent,
+    RepositoriesComponent
   ],
   exports: [
     DashboardComponent,
@@ -19,7 +32,9 @@ import { RouterModule } from '@angular/router';
   imports: [
     CommonModule,
     SharedModule,
-    RouterModule
+    RouterModule,
+    HttpClientModule,
+    FormsModule
   ]
 })
 export class PagesModule { }

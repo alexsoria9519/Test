@@ -1,0 +1,28 @@
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th scope="col">#</th>
+    <th scope="col"> Type </th>
+    <th scope="col">Url</th>
+    <th scope="col">Name</th>
+    <th scope="col">Actions</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let repo of dataRepos; index as i">
+    <th scope="row">{{ i + 1 }}</th>
+    <td>
+      {{ repo.type }}
+    </td>
+    <td>{{ repo.url}}</td>
+    <td>
+      {{ repo.name }}
+    </td>
+    <td> <div class="btn-group btn-group-toggle">
+      <button type="button" (click)="showRepository(repo)" class="btn btn-primary">Show</button>
+      <button type="button" (click)="updateRepository(repo)" class="btn btn-secondary">Update</button>
+      <button type="button" (click)="deleteRepository(repo)" class="btn btn-danger">Delete</button>
+    </div> </td>
+  </tr>
+  </tbody>
+</table>
