@@ -1,0 +1,86 @@
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+  <a class="navbar-brand" href="">TEST</a>       <!-- Nombre del Proyecto Corebits-->
+  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
+          <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
+              <a class="nav-link" href="">
+                  <i class="fa fa-fw fa-archive"></i>
+                  <span class="nav-link-text">Control General</span>
+              </a>
+          </li>
+
+          <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
+              <a class="nav-link" href="">
+                <i class="fa fa-fw fa-archive"></i>
+                  <span class="nav-link-text">API</span>
+              </a>
+          </li>
+
+          <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
+              <a class="nav-link" href="">
+                <i class="fa fa-fw fa-archive"></i>
+                  <span class="nav-link-text">DATABASE</span>
+              </a>
+          </li>
+
+
+      </ul>
+
+
+      <ul class="navbar-nav sidenav-toggler">
+          <li class="nav-item">
+              <a class="nav-link text-center" id="sidenavToggler">
+                  <i class="fa fa-fw fa-angle-left"></i>
+              </a>
+          </li>
+      </ul>
+
+
+      <ul class="navbar-nav ml-auto">
+          <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle mr-lg-2" id="alertsDropdown" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <i class="fa fa-fw fa-bell"></i>
+                  <span class="d-lg-none">Notificaciones
+                      <span class="badge badge-pill badge-warning"># Nuevas</span>
+                  </span>
+                  <span class="indicator text-warning d-none d-lg-block">
+                      <i class="fa fa-fw fa-circle"></i>
+                  </span>
+              </a>
+              <div class="dropdown-menu" aria-labelledby="alertsDropdown">
+                  <h6 class="dropdown-header">Nuevas Notificaciones</h6>
+
+                  <div class="dropdown-divider"></div>
+
+                  <a class="dropdown-item" href="#">
+                      <span class="text-success">
+                          <strong>
+                          <i class="fa fa-long-arrow-up fa-fw"></i>Novedades</strong>
+                      </span>
+                      <span class="small float-right text-muted">00:00 AM</span>
+                      <div class="dropdown-message small">Por Modificar</div>
+                  </a>
+
+                  <div class="dropdown-divider"></div>
+
+                  <a class="dropdown-item small" href="#">Ver mas</a>
+              </div>
+          </li>
+
+          <li class="nav-item">
+              <a class="nav-link">
+              <i class="fa fa-fw fa-user"></i> Admin Name </a>
+          </li>
+
+          <li class="nav-item">
+              <a class="nav-link" data-toggle="modal" data-target="#modal_cerrar">
+              <i class="fa fa-fw fa-sign-out"></i>Salir</a>
+          </li>
+      </ul>
+  </div>
+</nav>
