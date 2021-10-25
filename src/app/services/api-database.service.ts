@@ -15,8 +15,17 @@ export class ApiDatabaseService {
     return this.http.get(`${base_url}user/all`);
   }
 
+  getUserData(id: string){
+    return this.http.get(`${base_url}user/${id}`);
+  }
+
+
   getAllRepositoryData() {
     return this.http.get(`${base_url}repos/all`);
+  }
+
+  getRepoData(id: string){
+    return this.http.get(`${base_url}repos/${id}`);
   }
 
 }

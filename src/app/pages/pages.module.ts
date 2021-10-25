@@ -10,7 +10,12 @@ import { UsersComponent } from '../components/users/users.component';
 import { UserComponent } from '../components/users/user/user.component';
 import { RepositoryComponent } from '../components/repositories/repository/repository.component';
 import { RepositoriesComponent } from '../components/repositories/repositories.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { BrowserModule } from '@angular/platform-browser';
+import { FormlyModule } from '@ngx-formly/core';
+import { FormlyBootstrapModule } from '@ngx-formly/bootstrap';
+import { UserListComponent } from './api-database/user-list/user-list.component';
+import { UserFormComponent } from './api-database/user-form/user-form.component';
 
 
 
@@ -23,7 +28,9 @@ import { FormsModule } from '@angular/forms';
     UsersComponent,
     UserComponent,
     RepositoryComponent,
-    RepositoriesComponent
+    RepositoriesComponent,
+    UserListComponent,
+    UserFormComponent
   ],
   exports: [
     DashboardComponent,
@@ -34,7 +41,11 @@ import { FormsModule } from '@angular/forms';
     SharedModule,
     RouterModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    BrowserModule,
+    ReactiveFormsModule,
+    FormlyModule.forRoot(),
+    FormlyBootstrapModule
   ]
 })
 export class PagesModule { }

@@ -1,0 +1,20 @@
+
+<div class="row" *ngIf="key == 'create'; else update">
+  <div class="col-md-6">
+    Create user data
+  </div>
+  <div class="col-md-8">
+    <app-user [user]="user" key='create'></app-user>
+  </div>
+</div>
+
+<ng-template #update>
+  <div class="row">
+    <div class="col-md-6">
+      Update user data
+    </div>
+    <div class="col-md-8">
+      <app-user [user]="user" key='update'></app-user>
+    </div>
+  </div>
+</ng-template>

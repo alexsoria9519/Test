@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { UserData } from '../../interfaces/users';
 
 @Component({
@@ -16,22 +17,22 @@ export class UsersComponent implements OnInit {
 
   @Input() dataUsers: UserData[] = [];
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
 
 
   showUser(user: UserData){
-    console.log(user);
+    this.router.navigate(['api-database/user/data'], { queryParams: { user: user._id} });
   }
 
   updateUser(user: UserData){
-    console.log(user);
+    this.router.navigate(['api-database/user'], { queryParams: { user: user._id, key: 'update' } });
   }
 
   deleteUser(user: UserData){
-    console.log(user);
+    this.router.navigate(['api-database/user'], { queryParams: { user: user._id, key: 'delete' } });
   }
 
 

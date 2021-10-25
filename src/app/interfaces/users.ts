@@ -1,5 +1,5 @@
 export interface UserData {
-  _id: string;
+  _id?: string;
   type?: string;
   url?: string;
   avatar_url?: string;
